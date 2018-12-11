@@ -1,0 +1,17 @@
+<%= params %>。
+<% if params.is_a?(Hash) -%>
+param is hash!
+<% else -%>
+param is other!
+<% end %>
+<%= params[:key1] %>
+<% params[:key2].split(',').each do |v| %>
+<%= v %>
+<% case v when 'val2' %>
+hop
+<% when 'val3' %>
+step
+<% when 'val4' %>
+jump
+<% end %>
+<% end %>
